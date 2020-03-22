@@ -4,9 +4,6 @@ from pytube import YouTube, Playlist
 import os
 
 
-# TODO: add the ability to download playlists
-# TODO: add the ability to specify a download folder
-
 def ui():
     print('*****************Welcome to AutoTube!*****************\n\n')
     print('Please choose an option from the list:')
