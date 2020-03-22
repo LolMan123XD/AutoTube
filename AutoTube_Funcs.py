@@ -4,6 +4,8 @@ from pytube import YouTube, Playlist
 import os
 
 
+# TODO: add the ability to specify a download path
+
 def ui():
     print('*****************Welcome to AutoTube!*****************\n\n')
     print('Please choose an option from the list:')
@@ -40,7 +42,7 @@ def ui():
 
     elif choice == '2':
         print('Please choose what do you want to do:\n')
-        print(' 1- Search Youtube    | 2- Download a youtube video')
+        print(' 1- Search Youtube    | 2- Download a youtube video | 3- Download a playlist')
         command = input()
 
         if command == '1':
@@ -102,7 +104,7 @@ def download(what, url):
         choice = input()
 
         print('Downloading...')
-        yt.streams[int(choice) - 1].download(os.path.join('C:\\Users\\', os.getlogin(), 'Downloads'))
+        yt.streams[int(choice) - 1].download()
         print('Download complete!')
 
     elif what == 'playlist':
@@ -121,4 +123,4 @@ def download(what, url):
 
         print('Downloading...')
         for item in playlist:
-            item.streams[int(choice) - 1].download(os.path.join('C:\\Users\\', os.getlogin(), 'Downloads'))
+            item.streams[int(choice) - 1].download()
