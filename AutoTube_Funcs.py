@@ -109,6 +109,7 @@ def download(what, url):
         print('Download complete!')
 
     elif what == 'playlist':
+
         i = 0
         print('Getting the playlist...')
         playlist = Playlist(url)
