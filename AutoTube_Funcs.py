@@ -122,5 +122,9 @@ def download(what, url):
         choice = input()
 
         print('Downloading...')
-        for item in playlist:
-            item.streams[int(choice) - 1].download()
+        try:
+            iterrer = 0
+            while iterrer < len(playlist):
+                playlist[iterrer].streams[int(choice) - 1].download()
+        except Exception as e:
+            print(e)
